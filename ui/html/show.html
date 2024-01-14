@@ -1,0 +1,13 @@
+{{ define "show" }}
+
+{{ template "header" }}
+
+<main class="px-3">
+    <h1 class="cover-heading"> {{ .Title }} </h1>
+    <p class="lead"> {{  .Content }} </p>
+    <a href="/" class="btn btn-primary">Back</a>
+</main>
+
+{{ template "footer" }}
+
+{{ end }}

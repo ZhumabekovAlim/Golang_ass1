@@ -1,0 +1,22 @@
+{{ define "applicants" }}
+
+{{ template "header" }}
+
+<main class="px-3">
+    <h1>For applicants</h1><br>
+
+    {{ range . }}
+    <div class="alert alert-dark">
+        <h2>  {{ .Title }} <label style="font-size: 12pt;color:lightslategray">  {{ .CreatedDate }} </label></h2>
+        <p>  {{ .Anons }} </p>
+        <a href="/post/{{ .Id }}" class="btn btn-dark">Open full article</a>
+    </div>
+    {{ else }}
+    <div>No articles</div>
+    {{ end }}
+
+</main>
+
+{{ template "footer" }}
+
+{{ end }}
